@@ -1,0 +1,18 @@
+
+-- DB details
+
+CREATE DATABASE IF NOT EXISTS captcha_server_monday_db;
+
+USE captcha_server_monday_db;
+
+CREATE TABLE captchas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  token VARCHAR(255) NOT NULL,
+  captcha VARCHAR(10) NOT NULL,
+  browser_info TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+--SECRET_KEY=welcome_to_captcha_server_monday2025 
+-- use in react and node both
